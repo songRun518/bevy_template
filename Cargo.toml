@@ -1,0 +1,15 @@
+[package]
+name = "bevy-template"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+
+[dependencies]
+bevy = { version = "*", features = ["dynamic_linking"] }
+log = { version = "*", features = [
+    "max_level_debug",
+    "release_max_level_warn",
+] }
